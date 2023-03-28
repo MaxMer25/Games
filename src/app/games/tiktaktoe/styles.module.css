@@ -22,4 +22,12 @@
 
 .tile {
   background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tile span {
+  color: red;
+  font-size: 70px;
 }
