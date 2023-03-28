@@ -1,10 +1,18 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .headline {
   color: blue;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .board {
-  width: 80vw;
-  height: 80vh;
+  width: 70vw;
+  height: 70vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);

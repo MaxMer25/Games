@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 
 export default function Tiktaktoe() {
   return (
-    <>
+    <main className={styles.main}>
       <h1 className={styles.headline}>TikTakToe!</h1>
 
       <div className={styles.board}>
@@ -16,6 +16,6 @@ export default function Tiktaktoe() {
         <div className={styles.tiles}></div>
         <div className={styles.tiles}></div>
       </div>
-    </>
+    </main>
   );
 }
