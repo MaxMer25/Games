@@ -1,4 +1,5 @@
 import styles from "./styles.module.css";
+import Tile from "./tile";
 
 export default function Tiktaktoe() {
   return (
@@ -6,15 +7,15 @@ export default function Tiktaktoe() {
       <h1 className={styles.headline}>TikTakToe!</h1>
 
       <div className={styles.board}>
-        <div className={styles.tiles}></div>
-        <div className={styles.tiles}></div>
-        <div className={styles.tiles}></div>
-        <div className={styles.tiles}></div>
-        <div className={styles.tiles}></div>
-        <div className={styles.tiles}></div>
-        <div className={styles.tiles}></div>
-        <div className={styles.tiles}></div>
-        <div className={styles.tiles}></div>
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
       </div>
     </main>
   );
