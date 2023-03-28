@@ -1,7 +1,16 @@
-export default function Home() {
+import Link from "next/link";
+
+function Page() {
   return (
-    <main>
-      <h1>Hello World</h1>
-    </main>
+    <>
+      <h1>Game Library</h1>
+      <ul>
+        <li>
+          <Link href="/games/tiktaktoe">TikTakToe</Link>
+        </li>
+      </ul>
+    </>
   );
 }
+
+export default Page;
