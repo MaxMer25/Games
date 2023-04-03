@@ -10,6 +10,7 @@ function Page() {
       <h1>GameHub</h1>
       <StyledGameList>
         <li>
+          <h2>TikTakToe</h2>
           <Link href="/games/tiktaktoe">
             <Image
               src="/tiktaktoe.png"
@@ -20,6 +21,7 @@ function Page() {
           </Link>
         </li>
         <li>
+          <h2>Schach</h2>
           <Link href="/games/schach">
             <Image
               src="/Check.png"
@@ -40,7 +42,7 @@ const StyledWrapper = styled.main`
   flex-direction: column;
 
   h1 {
-    color: red;
+    color: white;
     font-size: 5rem;
     font-style: italic;
   }
@@ -51,24 +53,28 @@ const StyledGameList = styled.ul`
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 50px;
   grid-row-gap: 50px;
+  margin-top: 50px;
 
   a {
     text-decoration: none;
-    color: white;
   }
 
   li {
-    border: 4px solid black;
-    padding: 1rem;
-    border-radius: 25px;
-
-    img {
-      border-radius: 15px;
-    }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
 
     :hover {
       transform: scale(1.1);
     }
+  }
+
+  img {
+    border-radius: 15px;
+    border: 4px solid white;
+    padding: 1rem;
+    border-radius: 25px;
   }
 `;
 
