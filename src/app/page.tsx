@@ -3,36 +3,39 @@
 import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
+import PageNavbar from "@games/components/navbar";
 
 function Page() {
   return (
-    <StyledWrapper>
-      <h1>GameHub</h1>
-      <StyledGameList>
-        <li>
-          <h2>TikTakToe</h2>
-          <Link href="/games/tiktaktoe">
-            <Image
-              src="/tiktaktoe.png"
-              width={200}
-              height={200}
-              alt="picture of tiktaktoe"
-            />
-          </Link>
-        </li>
-        <li>
-          <h2>Schach</h2>
-          <Link href="/games/schach">
-            <Image
-              src="/Check.png"
-              width={200}
-              height={200}
-              alt="picture of Check"
-            />
-          </Link>
-        </li>
-      </StyledGameList>
-    </StyledWrapper>
+    <>
+      <PageNavbar />
+      <StyledWrapper>
+        <StyledGameList>
+          <li>
+            <h2>TikTakToe</h2>
+            <Link href="/games/tiktaktoe">
+              <Image
+                src="/tiktaktoe.jpg"
+                width={200}
+                height={200}
+                alt="picture of tiktaktoe"
+              />
+            </Link>
+          </li>
+          <li>
+            <h2>Schach</h2>
+            <Link href="/games/schach">
+              <Image
+                src="/Check.png"
+                width={200}
+                height={200}
+                alt="picture of Check"
+              />
+            </Link>
+          </li>
+        </StyledGameList>
+      </StyledWrapper>
+    </>
   );
 }
 
