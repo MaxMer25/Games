@@ -10,7 +10,7 @@ export default async function Tiktaktoe() {
 
   return (
     <>
-      <PageNavbar />
+      {/* <PageNavbar /> */}
       <main className={styles.main}>
         <h1 className={styles.headline}>TikTakToe!</h1>
 

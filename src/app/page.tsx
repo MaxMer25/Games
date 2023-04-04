@@ -8,7 +8,7 @@ import PageNavbar from "@games/components/navbar";
 function Page() {
   return (
     <>
-      <PageNavbar />
+      {/* <PageNavbar /> */}
       <StyledWrapper>
         <StyledGameList>
           <li>
