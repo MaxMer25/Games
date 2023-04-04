@@ -10,7 +10,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model TicTacToe {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tiles     Tile[]
+}
+
 model Tile {
-  id String   @id @default(auto()) @map("_id") @db.ObjectId
-  marked Boolean
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  marker      String     @default("")
+  row         Int
+  column      Int
+  TicTacToe   TicTacToe? @relation(fields: [ticTacToeId], references: [id])
+  ticTacToeId String?    @db.ObjectId
 }
