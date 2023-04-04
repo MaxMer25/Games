@@ -42,7 +42,7 @@ const StyledWrapper = styled.main`
   flex-direction: column;
 
   h1 {
-    color: white;
+    color: lightgreen;
     font-size: 5rem;
     font-style: italic;
   }
