@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { createNewGame, deleteGameState, getGameState } from "../../../../prisma/gameState";
+import { createNewGame, deleteGameState, getGameState, updateTile } from "../../../../prisma/gameState";
+import { Tile } from "@prisma/client";
 
 export async function GET() {
     const gameState = await getGameState();
@@ -18,8 +19,9 @@ export async function POST() {
 }
 
 export async function PUT(request: Request) {
-    const res = await request.json();
-    console.log(JSON.stringify(res))
+    const updatedTile = await request.json() as Tile;
+    const savedGameState = await updateTile(updatedTile)
+    console.log(JSON.stringify(savedGameState))
 
-    return NextResponse.json(res);
+    return NextResponse.json(savedGameState);
 }

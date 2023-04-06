@@ -22,6 +22,6 @@ model Tile {
   marker      String     @default("")
   row         Int
   column      Int
-  TicTacToe   TicTacToe? @relation(fields: [ticTacToeId], references: [id])
+  ticTacToe   TicTacToe? @relation(fields: [ticTacToeId], references: [id])
   ticTacToeId String?    @db.ObjectId
 }

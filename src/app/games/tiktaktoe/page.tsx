@@ -18,15 +18,7 @@ export default async function Tiktaktoe() {
         {game?.tiles ? <DeleteGameState /> : null}
         {game ? (
           <div className={styles.board}>
-            <Tile />
-            <Tile />
-            <Tile />
-            <Tile />
-            <Tile />
-            <Tile />
-            <Tile />
-            <Tile />
-            <Tile />
+            {game.tiles.map((tile) => <Tile tile={tile} key={tile.id}/>)}
           </div>) : null}
 
         <div style={{color: 'white'}}>DB GAME STATE: {JSON.stringify(game)}</div>
